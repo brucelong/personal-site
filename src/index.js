@@ -101,7 +101,7 @@ class Game extends React.Component {
 
 
 ReactDOM.render(
-	<Game />,
+	<TopMenu />,
   	document.getElementById('root')
 );
 
