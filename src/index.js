@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
-const topMenu = ['Home', 'Resume', 'Projects' ];
+const Menu = ['Home', 'Resume', 'Projects' ];
 const projectsMenu = ['Apple ][c Conversion', 'Cobalt RaQ2 Conversion', 'V20 FPGA Motherboard'];
 
 // If you want your app to work offline and load faster, you can change
@@ -15,7 +15,11 @@ serviceWorker.unregister();
 
 class TopMenu extends React.Component {
 	render(){
-		
+		<header>
+			<Button variant="primary">Menu(0)</Button>
+			<Button variant="primary">Menu(1)</Button>
+			<Button variant="primary">Menu(2)</Button>
+		</header>
 	}
 
 }
