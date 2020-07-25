@@ -5,9 +5,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
-const Menu = ['Home', 'Resume', 'Projects' ];
-const projectsMenu = ['Apple ][c Conversion', 'Cobalt RaQ2 Conversion', 'V20 FPGA Motherboard'];
-
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
@@ -15,11 +12,24 @@ serviceWorker.unregister();
 
 class TopMenu extends React.Component {
 	render(){
-		<header>
-			<Button variant="primary">Menu(0)</Button>
-			<Button variant="primary">Menu(1)</Button>
-			<Button variant="primary">Menu(2)</Button>
-		</header>
+		return(
+			<Navbar bg='dark' expand='lg'>
+					<Navbar.Brand href="#home">Charles Long</Navbar.Brand>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Nav className="mr-auto">
+							<Nav.Link href="#home">Home</Nav.Link>
+							<Nav.Link href="#resume">Resume</Nav.Link>
+							<Nav.Dropdown title="Projects" id="basic-nav-dropdown">
+								<NavDropdown.Item href="#appleiic">Apple ][c Conversion</NavDropdown.Item>
+								<NavDropdown.Item href="#cobaltraq2">Cobalt RaQ 2 Conversion</NavDropdown.Item>
+								<NavDropDown.Divider />
+								<NavDropdown.Item href="#v20mobofpga">V20 FPGA Motherboard</NavDropdown.Item>
+							</Nav.Dropdown>
+						</Nav>
+					</Navbar.Collapse>
+			</Navbar>
+		);
 	}
 
 }
